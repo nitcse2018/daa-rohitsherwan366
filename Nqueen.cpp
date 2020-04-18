@@ -52,7 +52,7 @@ bool solveNQueen(char board[][100],int n,int row){
 
         }
 
-        return true;
+        return false;
     }
 
     ///Rec Case
@@ -64,7 +64,7 @@ bool solveNQueen(char board[][100],int n,int row){
             if(canPlace(board,row,pos,n)){
                     board[row][pos]='Q';
 
-                    bool agliQueenRakhPayeKya = solveNQueen(board,n,row+1);
+                    bool agliQueenRakhPayeKya = solveNQueen(board,n,row+1);// RECUR
                     if(agliQueenRakhPayeKya==true){
                         return true;
                     }
